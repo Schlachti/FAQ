@@ -1,0 +1,20 @@
+    <app-help
+      *ngIf="opened"
+      [information]="discription">
+    </app-help>
+    <div  class="image" [ngStyle]="{'height' : divHomeComponentHigh + 'px'}">
+        <div class="action"  onclick="actionToggle();">
+            <span>Hilfe</span>
+            <ul>
+                <li (click)="callForHelp(0)">Wie lade ich einen Lebenslauf hoch?</li>
+                <br>
+                <li (click)="callForHelp(1)">Kann ich einen Lebenslauf per Mail hochladen?</li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            function actionToggle(){
+                var action = document.querySelector('.action');
+                action.classList.toggle('active');
+            }
+        </script>
+    </div>
